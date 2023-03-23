@@ -1,0 +1,7 @@
+echo "# Alen_Aji-100DoC-IEEEMACE" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Alenaji25/Alen_Aji-100DoC-IEEEMACE.git
+git push -u origin main
