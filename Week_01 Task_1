@@ -1,0 +1,11 @@
+a="The sunset sets at twelve o' clock."
+b=list(a.lower())
+st1=''
+for i in b:
+    if i.isalnum():
+        o=ord(i)
+        o=o-96
+        r=ascii(o)
+        st1=st1+' '+str(r)
+st1=st1.strip()
+print(st1)
