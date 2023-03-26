@@ -1,0 +1,5 @@
+def square(m):
+    num1=num*num
+    print(num1)
+num=int(input('GIVE ME A NUMBER TO FIND ITS SQUARE='))
+square(num)
