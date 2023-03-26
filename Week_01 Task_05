@@ -1,0 +1,9 @@
+def square_sum(l):
+    sq=0
+    sum=0
+    for i in l:
+        sq=i*i
+        sum=sum+sq
+    print(sum)
+
+square_sum(l)
