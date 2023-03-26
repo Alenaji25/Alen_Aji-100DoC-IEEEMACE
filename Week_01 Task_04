@@ -1,0 +1,4 @@
+def sum_l(l1):
+    SUM=sum(l1)
+    return(SUM)
+sum_l(l1)
