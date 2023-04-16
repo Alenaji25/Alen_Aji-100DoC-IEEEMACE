@@ -1,0 +1,149 @@
+#task1
+f=open('myself.txt','w')
+q='My name is ALEN K AJI.\nI am studying in Mar Athanasius College of Engineering, Kothamangalam.The course i have opted for is Computer Science Engineering.I am from Piravom, Ernakulam.I joined 100days of code to study coding and sharpen my skills.Thats all for now.\nThank you for reading'
+f.write(q)
+f.close()
+fin=open('myself.txt','r')
+g=fin.read()
+print(g)
+fin.close()
+
+#task2
+def file_create():
+    f=open('abc.txt','w+')
+    s=input('Write the text : ')
+    print('The file has been created.')
+    f.write(s)
+    f.close()
+def copy_file():
+    fin=open('abc.txt','r+')
+    fout=open('xyz.txt','a+') 
+    s=fin.read() 
+    fout.write(s)
+    print('The file contents have been copied to another file. ')
+    fout.close()
+    fin.close()
+def display_file():
+    f1=open('abc.txt','r+')
+    t=f1.read()
+    print(t)
+    f1.close()
+while True:
+ print('MENU')
+ print('1.To create a new file')
+ print('2.To display file')
+ print('3.Copy the file contents to another file')
+ k=int(input('The preferred Choice is :'))
+ if k==1:
+     file_create()
+ elif k==2:
+    
+     display_file()
+ elif k==3:
+     copy_file()
+     
+     
+#task3
+def create_file():
+    f=open('abc1.txt','w+')
+    s=input('Write a set of  numbers seperated by space:')
+    f.write(s)
+    f.close()
+create_file()
+prime_numbers=[]
+odd=[]
+even=[]
+def prime(n):
+    if n<2:
+        return False
+    else:
+        for j in range(2,n//2+1):
+            if n%j==0:
+                return False
+        return True    
+v=''
+b=''
+c=''
+def sorted_file():
+    global v
+    global c
+    global b
+    fin=open('abc1.txt','r+')
+    fout=open('xyz1.txt','w+')
+    k=fin.read()
+    t=k.split(' ')
+    for i in t:
+        w=int(i)
+        
+        if prime(w):
+            
+            v=v+i+' '
+        if w%2==0:
+            
+            b=b+i.strip()+' '
+        
+        else:
+            
+            c=c+i.strip()+' '
+    odd.append(c)
+    even.append(b)
+    prime_numbers.append(v)
+    fout.writelines(prime_numbers+['\n'])
+    fout.writelines(odd+['\n'])
+    fout.writelines(even+['\n'])
+   
+    fout.seek(0)
+    fin.close()
+    prime1=fout.readline()
+    print(prime1)
+    
+    odd1=fout.readline()
+    
+    even1=fout.readline()
+    print('prime=',end=' ')
+    for y in prime1.split(' '):
+        
+        print(y,end=' ')
+    print()
+    print('odd=',end=' ')
+    for x in odd1.split(' '):
+       
+        print(x,end=' ')
+    print()
+    print('even=',end=' ')
+    for z in even1.split(' '):
+        
+        print(z,end=' ')
+    print()
+    fout.close
+sorted_file()
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
